@@ -1,0 +1,37 @@
+.bold {
+  margin-top: 1.5em;
+  margin-bottom: 1.5em;
+  margin-left: 0;
+  margin-right: 0;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 110%;
+  color: #e540c2;
+}
+.go{
+  max-height: 0px;
+}
+
+.button {
+  background: #e540c2;
+  border: none;
+  color: #fff;
+  width: auto;
+  cursor: pointer;
+  text-transform: uppercase;
+  display: inline-block;
+  margin-top: 15px;
+  padding: 5px 15px;
+  font-size: 1.1em;
+  border-radius: 2px;
+  letter-spacing: 1px;
+  font-family: 'Arial Black', sans-serif;
+  font-weight: bold;
+	text-shadow: 2px 2px black;
+	text-align: center;
+  font-weight: bold;
+}
+
+.button:hover {
+  background-image: url("../images/star2.gif");
+}

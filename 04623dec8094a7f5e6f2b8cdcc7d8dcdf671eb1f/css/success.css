@@ -1,0 +1,303 @@
+body{
+	margin:0;
+	padding:0;
+	background-image:url("../img/star.gif");
+	height: 100%;
+	overflow: scroll;
+/*	background-image: url("images/noise.gif");*/
+}
+
+#warp{
+/*	border: 5px solid red;*/
+	margin-left: auto;
+	margin-right: auto;
+	width: 100vw;
+	height: 100vh;
+	background-image: url("../img/warp1.png");
+	background-size: 110vw;
+	background-repeat: no-repeat;
+	position: fixed;
+	background-position: center;
+    -webkit-animation: fadein 7s infinite alternate;
+       animation: fadein 7s infinite alternate;
+}
+
+#festival_title{
+	width: 70%;
+	height: 15%;
+/*	border: 3px white solid;*/
+	position: fixed;
+	background-position: top;
+	text-align: center;
+	font-size: 4em;
+	color: rgba(255, 0, 255, 0.2);
+	text-shadow: 2px 4px 1px rgba(153,255,204,0.2);
+	transition: color 5s;
+	font-family: 'IBM Plex Mono', monospace;
+	-webkit-animation: floating 30s infinite alternate linear;
+	        animation: floating 30s infinite alternate linear;
+
+}
+
+#festival_title:hover{
+	color: rgba(255,0,255, 0.7);
+	text-shadow: 2px 4px 1px rgba(153,255,204,0.8);
+}
+
+
+#middle_color{
+/*	position:fixed;*/
+	color: rgba(153,255,204,0.4);
+	text-shadow: 2px 4px 1px rgba(255,0,255, 0.2);
+	font-style: italic;
+	font-weight: 400;
+}
+
+#festival_title:hover #middle_color{
+	color: rgba(153,255,204,0.7);
+	text-shadow: 2px 4px 1px rgba(255,0,255, 0.7);
+}
+
+
+#goodby{
+
+	/*horizontal and vertical alignment of absolute object*/
+	top: 0; left: 0; bottom: 0; right: 0;
+	position: absolute;
+	margin:auto;
+	margin-top: 26vh;
+
+	/*v+h alignment of text inside container*/
+	text-align: justify;
+	overflow: scroll;
+
+	/*fonts and colors*/
+	font-family: 'IBM Plex Mono', monospace;
+	font-weight: 200;
+	font-style: italic;
+	font-size: 1.5vw;
+	color: white;
+
+	/*container size and attributes*/
+	width: 20em;
+	height:20em;
+/*	border: solid;*/
+
+	/*animation*/
+	-webkit-animation: appear 9s alternate;
+       animation: appear 9s alternate;
+}
+
+#scroll{
+		/*horizontal and vertical alignment of absolute object*/
+	top: 0; left: 0; bottom: 0; right: 0;
+	position: fixed;
+	margin:auto;
+	margin-top: 22vh;
+
+	/*v+h alignment of text inside container*/
+	text-align: center;
+	overflow: scroll;
+
+	/*fonts and colors*/
+	font-family: 'IBM Plex Mono', monospace;
+	font-weight: 200;
+/*	font-style: italic;*/
+	font-size: 1.5vw;
+	color: white;
+
+	/*container size and attributes*/
+	width: 20em;
+	height:2em;
+		/*animation*/
+	-webkit-animation: appear 9s alternate;
+       animation: appear 9s alternate;
+}
+a{
+	position:fixed;
+	padding: 10px 3px;
+	background-color: rgba(0,0,0,0);
+	color: white;
+	font-family: "Arial Black", sans-serif;
+	font-size: 16px;
+	width: 220px;
+	font-weight: bold;
+	text-shadow: 2px 2px black;
+	text-align: center;
+	margin: auto;
+	text-decoration:none;
+	z-index: 1;
+}
+
+a:hover {
+	color: black;
+}
+
+#back {
+	color: #e540c2;
+}
+
+#back:hover {
+	color: black;
+}
+
+#button{
+	margin: auto;
+	margin-top: 38vh;
+	position: relative;
+	display:flex;
+	align-content: center;
+/*	border: 2px white solid;*/
+	-webkit-animation: appear 9s linear forwards;
+       animation: appear 9s linear forwards;
+}
+
+
+
+/* QUERIES (RESPONSIVE) */
+@media screen and (max-width: 900px){
+	#warp{
+		background-size: 150%;
+	}
+
+	#goodby{
+		font-size: 0.9em;
+
+	}
+}
+
+
+@media screen and (max-width: 600px) {
+	a{
+		font-size: 0.7em;
+		margin-left: 5px;
+		padding-left: 10px;
+		text-align: left;
+
+	}
+
+
+	#warp{
+		background-size: 170vw;
+	}
+
+	#festival_title{
+	/*	border: white solid;*/
+		margin:auto;
+		padding-top: 5vh;
+		width: 90vw;
+		height: 15vh;
+		font-size: 7vw;
+	/*	-webkit-animation: title_color_phone 6s infinite alternate;
+				animation: title_color_phone 6s infinite alternate;*/
+		-webkit-animation: floating_phone 15s infinite alternate linear;
+		        animation: floating_phone 15s infinite alternate linear;
+	}
+
+	#scroll{
+		font-size:0.8em;
+	}
+
+	#middle_color{
+	/*	-webkit-animation: title_middlecolor_phone 6s infinite alternate;
+				animation: title_middlecolor_phone 6s infinite alternate;*/
+	}
+
+	/*:active allows the title to be clicked instead of hovered on phones*/
+	#festival_title:hover, #festival_title:active{
+		color: rgba(255,0,255, 0.7);
+		text-shadow: 2px 4px 1px rgba(153,255,204,0.8);
+	}
+}
+
+
+/* ANIMATIONS */
+/* webkit: Chrome, Safari*/
+/* moz: Mozilla Firefox*/
+
+
+@-webkit-keyframes fadein{
+    0%   {filter: brightness(1);}
+    50%  {filter: brightness(0.4);}
+    100% {filter: brightness(0.2);}
+}
+@-moz-keyframes fadein{
+    0%   {filter: brightness(1);}
+    50%  {filter: brightness(0.4);}
+    100% {filter: brightness(0.2);}
+}
+@keyframes fadein{
+    0%   {filter: brightness(1);}
+    50%  {filter: brightness(0.4);}
+    100% {filter: brightness(0.2);}
+}
+
+
+
+@-webkit-keyframes appear{
+    0%   {filter: opacity(0);}
+    50%  {filter: opacity(0.4);}
+    100% {filter: opacity(1);}
+}
+@-moz-keyframes appear{
+    0%   {filter: opacity(0);}
+    50%  {filter: opacity(0.4);}
+    100% {filter: opacity(1);}
+}
+@keyframes appear{
+    0%   {filter: opacity(0);}
+    50%  {filter: opacity(0.4);}
+    100% {filter: opacity(1);}
+}
+
+
+
+
+/*floating animation for title*/
+@-webkit-keyframes floating{
+	0%{-webkit-transform: translate(-10vw, 5vh);}
+	50%{-webkit-transform: translate(15vw, -5vh);}
+	100%{-webkit-transform: translate(25vw, 60vh);}
+}
+@keyframes floating{
+	0%{transform: translate(-10vw, 5vh);}
+	50%{transform:  translate(15vw, -5vh);}
+	100%{transform: translate(25vw, 60vh);}
+}
+
+
+
+
+@-webkit-keyframes floating_phone{
+	0%{-webkit-transform: translate(-1vw, 5vh);}
+	50%{-webkit-transform: translate(5vw, -5vh);}
+	100%{-webkit-transform: translate(10vw, 5vh);}
+}
+@keyframes floating_phone{
+	0%{transform: translate(-1vw, 5vh);}
+	50%{transform:  translate(5vw, -5vh);}
+	100%{transform: translate(10vw, 5vh);}
+}
+
+
+
+
+@keyframes title_color_phone{
+	0%{	color: rgba(255, 0, 255, 0.2);text-shadow: 2px 4px 1px rgba(153,255,204,0.2);}
+	100%{color: rgba(255,0,255, 0.7); text-shadow: 2px 4px 1px rgba(153,255,204,0.8);}
+}
+@-webkit-keyframes title_color_phone{
+	0%{	-webkit-color: rgba(255, 0, 255, 0.2);-webkit-text-shadow: 2px 4px 1px rgba(153,255,204,0.2);}
+	100%{-webkit-color: rgba(255,0,255, 0.7); -webkit-text-shadow: 2px 4px 1px rgba(153,255,204,0.8);}
+}
+
+
+
+@keyframes title_middlecolor_phone{
+	0%{color: rgba(153,255,204,0.2); text-shadow: 2px 4px 1px rgba(255,0,255, 0.2);}
+	100%{color: rgba(153,255,204,0.8);text-shadow: 2px 4px 1px rgba(255,0,255, 0.8);}
+}
+@-webkit-keyframes title_middlecolor_phone{
+	0%{	-webkit-color: rgba(153,255,204,0.2); -webkit-text-shadow: 2px 4px 1px rgba(255,0,255, 0.2);}
+	100%{-webkit-color: rgba(153,255,204,0.8); -webkit-text-shadow: 2px 4px 1px rgba(255,0,255, 0.8);}
+}

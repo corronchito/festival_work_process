@@ -1,0 +1,208 @@
+body{
+	margin:0;
+	padding:0;
+	background-image:url("../img/star.gif");
+	height: 100%;
+	overflow: scroll;
+/*	background-image: url("images/noise.gif");*/
+}
+
+a{
+	padding: 10px 15px;
+	background-color: rgba(0,0,0,0);
+	color: white;
+	font-family: "Arial Black", sans-serif;
+	font-size: 1em;
+	width: 5vw;
+/*	border: 6px solid white;*/
+/*	margin-top: 20px;*/
+	font-weight: bold;
+	text-shadow: 2px 2px black;
+	text-align: center;
+	margin: auto;
+	text-decoration:none;
+}
+
+a:hover {
+	color: black;
+}
+
+#back {
+	color: #e540c2;
+}
+
+#back:hover {
+	color: black;
+}
+
+#festival_title{
+	background: rgba(0,0,0,0.5);
+	width: 70vw;
+	height: 15vh;
+/*	border: 3px white solid;*/
+/*	position: fixed;*/
+	background-position: top;
+/*	width: 100vw;*/
+	text-align: center;
+	font-size: 7vw;
+	color: rgba(255, 0, 255, 0.2);
+	text-shadow: 2px 4px 1px rgba(153,255,204,0.2);
+	transition: color 5s;
+	font-family: 'IBM Plex Mono', monospace;
+	-webkit-animation: floating 25s infinite alternate-reverse linear;
+	        animation: floating 25s infinite alternate-reverse linear;
+
+}
+
+#festival_title:hover{
+	color: rgba(255,0,255, 0.7);
+	text-shadow: 2px 4px 1px rgba(153,255,204,0.8);
+}
+
+
+#middle_color{
+/*	position:fixed;*/
+	color: rgba(153,255,204,0.4);
+	text-shadow: 2px 4px 1px rgba(255,0,255, 0.2);
+	font-style: italic;
+	font-weight: 400;
+}
+
+#festival_title:hover #middle_color{
+	color: rgba(153,255,204,0.7);
+	text-shadow: 2px 4px 1px rgba(255,0,255, 0.7);
+}
+
+
+#invitation{
+	margin: auto;
+	padding: 3%;
+	padding-right: 5vw;
+/*	border: 3px white solid;*/
+	position: relative;
+	color: white;
+	background: rgba(0,0,0,0.5);
+	font-family: 'IBM Plex Mono', monospace;
+	font-style: italic;
+	font-size: 1.2em;
+	font-weight: 200;
+}
+
+#invitation_title{
+	font-style:normal;
+	font-weight:300;
+	font-size: 200%;
+}
+
+#title_advent{
+	font-style: italic;
+}
+
+#join {
+	text-align: center;
+	padding-top: 40px;
+	clear: both;
+	background: #e540c2;
+	border: none;
+	color: #fff;
+	width: auto;
+	cursor: pointer;
+	text-transform: uppercase;
+	display: inline-block;
+	padding: 15px 30px;
+	font-size: 1.1em;
+	border-radius: 2px;
+	letter-spacing: 1px;
+}
+
+#join:hover {
+	background: #fff;
+	color: #e540c2;
+}
+
+.green{
+	color: #3ee485;
+}
+
+.yellow{
+	color: #fff424;
+}
+
+.orange{
+	color:#fd6504;
+}
+
+.magenta{
+	color:#e540c2;
+}
+
+.blue{
+	color:#33ccff;
+}
+
+.blue2{
+	color:#119dfc;
+}
+
+.bold{
+	font-weight:500;
+}
+
+.straight{
+	font-style: none;
+}
+
+
+@media screen and (max-width: 700px) {
+	a{
+		font-size: 1em;
+		width: 5vw;
+	}
+
+	#invitation{
+		font-size: 15px;
+	}
+
+	#festival_title{
+		margin:auto;
+		padding-top: 5vh;
+		width: 90vw;
+		height: 15vh;
+		font-size: 7vw;
+		-webkit-animation: floating_phone 15s infinite alternate linear;
+		        animation: floating_phone 15s infinite alternate linear;
+	}
+
+
+	/*:active allows the title to be clicked instead of hovered on phones*/
+	#festival_title:hover, #festival_title:active{
+		color: rgba(255,0,255, 0.7);
+		text-shadow: 2px 4px 1px rgba(153,255,204,0.8);
+	}
+
+}
+
+
+@-webkit-keyframes floating{
+	0%{-webkit-transform: translate(5vw, 1vh);}
+	50%{-webkit-transform: translate(10vw, -10vh);}
+	100%{-webkit-transform: translate(15vw, 1vh);}
+}
+
+@keyframes floating{
+	0%{transform: translate(5vw, 1vh);}
+	50%{transform:  translate(10vw, -10vh);}
+	100%{transform: translate(15vw, 1vh);}
+}
+
+@-webkit-keyframes floating_phone{
+	0%{-webkit-transform: translate(-1vw, 3vh);}
+	50%{-webkit-transform: translate(5vw, -3vh);}
+	100%{-webkit-transform: translate(10vw, 3vh);}
+}
+
+@keyframes floating_phone{
+	0%{transform: translate(-1vw, 3vh);}
+	50%{transform:  translate(5vw, -3vh);}
+	100%{transform: translate(10vw, 3vh);}
+}
